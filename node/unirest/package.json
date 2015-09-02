@@ -1,0 +1,14 @@
+{
+  "name": "unirest_servicenow",
+  "version": "1.0.0",
+  "description": "sample clients using unirest library",
+  "main": "clent.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bryan Barnard <bmbarnard@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "unirest": "^0.4.2"
+  }
+}
