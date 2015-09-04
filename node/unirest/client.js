@@ -4,6 +4,7 @@
  * Returning Configuration Item as JSON
  *
  * Uses Basic Authentication to make the request and the the Mashape Unirest Node.js library
+ * http://unirest.io/nodejs.html
  */
 
 
@@ -13,7 +14,7 @@ var Request = unirest.get('https://demonightlyus.service-now.com/api/now/table/c
 
 Request.auth({
     user: 'admin',
-    pass: 'snow2004',
+    pass: 'admin',
     sendImmediately: true
 });
 
