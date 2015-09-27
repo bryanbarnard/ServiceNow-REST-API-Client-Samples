@@ -8,13 +8,13 @@
  */
 
 
-
 var unirest = require('unirest');
+unirest.request.defaults({jar:true});
 var Request = unirest.get('https://demonightlyus.service-now.com/api/now/table/cmdb_ci?sysparm_limit=1');
 
 Request.auth({
     user: 'admin',
-    pass: 'admin',
+    pass: 'snow2004',
     sendImmediately: true
 });
 
