@@ -4,13 +4,12 @@
  */
 (function simpleRequest() {
     var request = require('request');
-    //var request = request.defaults({jar:true});
+    var request = request.defaults({jar:true});  //default all requests to use global jar object and be sessio naware
     require('request-debug')(request);
 
 
     var options = {
         uri: 'https://demonightlyus.service-now.com/api/now/table/cmdb_ci?sysparm_limit=1',
-        jar:true,
         time:true,
         auth: {
             'user': 'admin',

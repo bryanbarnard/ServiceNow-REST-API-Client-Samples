@@ -9,7 +9,7 @@
 
 
 var unirest = require('unirest');
-unirest.request.defaults({jar:true});
+unirest.request.defaults({jar:true}); //causes each request to be session aware and reuse sessions
 var Request = unirest.get('https://demonightlyus.service-now.com/api/now/table/cmdb_ci?sysparm_limit=1');
 
 Request.auth({
