@@ -10,7 +10,8 @@
 
     var options = {
         uri: 'https://demonightlyus.service-now.com/api/now/table/cmdb_ci?sysparm_limit=1',
-        time:true,
+        method: 'GET',
+        time:true, //causes each request to be timed
         auth: {
             'user': 'admin',
             'pass': 'snow2004',
@@ -23,18 +24,12 @@
     };
 
 
-    request( options,function (error, response, body) {
-
+    var callback = function (error, response, body) {
         if (!error && response.statusCode == 200) {
             console.log('elapsed_time: ' + response.elapsedTime);
         }
+    };
 
-
-        request(options ,function (error, response, body) {
-
-            if (!error && response.statusCode == 200) {
-                console.log('elapsed_time: ' + response.elapsedTime);
-            }
-        });
-    });
+    //make the request, note that subsequent requests will send cookies if cookies were received in first response
+    request(options, callback);
 })();
